@@ -1,0 +1,17 @@
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(GetResult(10));
+    }
+     
+    private static int GetResult(int offset)
+    {
+        var result = 0;
+        for (var i = offset; i < 10; i++);
+        {
+            result += offset % 2;
+        }
+        return result;
+    }
+}
