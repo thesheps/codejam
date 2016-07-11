@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace CodeJam.Data.Migrations
 {
-    [Migration(4)]
+    [Migration(3)]
     public class SeedProblems1 : Migration
     {
         public override void Up()

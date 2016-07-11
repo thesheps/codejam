@@ -9,6 +9,7 @@ namespace CodeJam.Data.Repositories
     public interface IProblemRepository
     {
         IList<Problem> All();
+        Problem GetById(int problemId);
     }
 
     public class ProblemRepository : IProblemRepository
@@ -23,6 +24,14 @@ namespace CodeJam.Data.Repositories
             using (var cnn = new SqlConnection(_connectionString))
             {
                 return cnn.Query<Problem>("SELECT * FROM Problem").ToList();
+            }
+        }
+
+        public Problem GetById(int problemId)
+        {
+            using (var cnn = new SqlConnection(_connectionString))
+            {
+                return cnn.Query<Problem>("SELECT * FROM Problem WHERE ProblemId = @ProblemId", new { problemId }).SingleOrDefault();
             }
         }
 

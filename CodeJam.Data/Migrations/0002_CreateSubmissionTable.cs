@@ -2,7 +2,7 @@
 
 namespace CodeJam.Data.Migrations
 {
-    [Migration(3)]
+    [Migration(2)]
     public class CreateSubmissionTable : Migration
     {
         public override void Up()
@@ -10,8 +10,7 @@ namespace CodeJam.Data.Migrations
             Create.Table("Submission")
                 .WithColumn("SubmissionId").AsInt32().PrimaryKey("PK_Submission_SubmissionId")
                 .WithColumn("ProblemId").AsInt32().ForeignKey("Problem", "ProblemId")
-                .WithColumn("UserId").AsInt32().ForeignKey("User", "UserId")
-                .WithColumn("Answer").AsString();
+                .WithColumn("EmailAddress").AsString();
         }
 
         public override void Down()

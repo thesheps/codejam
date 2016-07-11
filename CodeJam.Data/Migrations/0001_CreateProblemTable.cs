@@ -2,7 +2,7 @@
 
 namespace CodeJam.Data.Migrations
 {
-    [Migration(2)]
+    [Migration(1)]
     public class CreateProblemTable : Migration
     {
         public override void Up()

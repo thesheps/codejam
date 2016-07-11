@@ -42,8 +42,9 @@
       <HintPath>..\packages\FluentMigrator.Runner.1.6.2\lib\40\FluentMigrator.Runner.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\CodeJam\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -58,12 +59,10 @@
   <ItemGroup>
     <Compile Include="Entities\Problem.cs" />
     <Compile Include="Entities\Submission.cs" />
-    <Compile Include="Entities\User.cs" />
-    <Compile Include="Migrations\0002_CreateProblemTable.cs" />
-    <Compile Include="Migrations\0003_CreateSubmissionTable.cs" />
-    <Compile Include="Migrations\0001_CreateUserTable.cs" />
+    <Compile Include="Migrations\0001_CreateProblemTable.cs" />
+    <Compile Include="Migrations\0002_CreateSubmissionTable.cs" />
     <Compile Include="Migrations\Runner.cs" />
-    <Compile Include="Migrations\0004_SeedProblems.cs" />
+    <Compile Include="Migrations\0003_SeedProblems.cs" />
     <Compile Include="Problems.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +70,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ProblemRepository.cs" />
+    <Compile Include="Repositories\SubmissionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Problems.resx">

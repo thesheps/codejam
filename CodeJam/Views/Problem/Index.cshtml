@@ -16,11 +16,7 @@
         <div class="input-group row">
             <input id="problemId" type="hidden" value="@Model.ProblemId" />
 
-            <div class="col-md-6">
-                <input type="text" class="form-control" id="emailAddress" placeholder="Email Address">
-            </div>
-
-            <div class="col-md-4">
+            <div class="col-md-10">
                 <input type="text" class="form-control" id="answer" placeholder="Answer">
             </div>
 
@@ -37,11 +33,12 @@
 
 <script type="text/javascript">
     $(function () {
-        $("#submit").on("click", function() {
-            $.post("problem/solve", {
+        $("#submit").on("click", function () {
+            $.post("../submission/solve", {
                 problemId: $("#problemId").val(),
-                emailAddress: $("#emailAddress").val(),
+                emailAddress,
                 answer: $("#answer").val()
+            }, function (data) {
             });
         });
     });

@@ -17,3 +17,7 @@ h1 {
 .syntaxhighlighter {
     padding: 10px !important;   
 }
+
+.login-form {
+    padding-top: 15px;
+}
