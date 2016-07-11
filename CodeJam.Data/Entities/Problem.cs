@@ -1,6 +1,6 @@
-﻿namespace CodeJam.Models
+﻿namespace CodeJam.Data.Entities
 {
-    public class ProblemModel
+    public class Problem
     {
         public int ProblemId { get; set; }
         public string Code { get; set; }

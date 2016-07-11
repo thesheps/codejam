@@ -1,4 +1,5 @@
 ﻿using System.Web.Routing;
+using CodeJam.Data.Migrations;
 
 namespace CodeJam
 {
@@ -7,6 +8,7 @@ namespace CodeJam
         protected void Application_Start()
         {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Runner.SqlServer("CodeJam").Up();
         }
     }
 }

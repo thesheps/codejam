@@ -13,3 +13,7 @@
 h1 {
     font-family: "Ao Bold";
 }
+
+.syntaxhighlighter {
+    padding: 10px !important;   
+}

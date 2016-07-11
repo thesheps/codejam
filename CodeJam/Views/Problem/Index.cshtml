@@ -1,24 +1,48 @@
 ﻿@model CodeJam.Models.ProblemModel
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <pre class="brush: csharp">
-        @Model.Code
-    </pre>
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+        <pre class="brush: csharp">@Model.Code</pre>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-3"></div>
 </div>
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Submit</button>
-            </span>
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+        <div class="input-group row">
+            <input id="problemId" type="hidden" value="@Model.ProblemId" />
+
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="emailAddress" placeholder="Email Address">
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="answer" placeholder="Answer">
+            </div>
+
+            <div class="col-md-2">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" id="submit" type="button">Submit</button>
+                </span>
+            </div>
         </div>
     </div>
-    <div class="col-md-4"></div>
+
+    <div class="col-md-3"></div>
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#submit").on("click", function() {
+            $.post("problem/solve", {
+                problemId: $("#problemId").val(),
+                emailAddress: $("#emailAddress").val(),
+                answer: $("#answer").val()
+            });
+        });
+    });
+</script>
