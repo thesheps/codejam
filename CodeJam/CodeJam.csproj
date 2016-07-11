@@ -190,9 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Problems\Problem1.cs">
+    <Content Include="Problems\Problem1.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="Views\Shared\_ProblemLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
