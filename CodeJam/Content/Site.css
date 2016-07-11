@@ -1,0 +1,15 @@
+﻿@font-face {
+    font-family: "Ao Bold";
+    src: url("/fonts/AoOz-Bold.woff") format('woff');
+}
+
+.site-header {
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    color: #85be2f;
+}
+
+h1 {
+    font-family: "Ao Bold";
+}
