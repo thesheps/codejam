@@ -1,5 +1,24 @@
 ﻿@model CodeJam.Models.ProblemModel
 
-<pre class="brush: csharp">
-    @Model.Code
-</pre>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <pre class="brush: csharp">
+        @Model.Code
+    </pre>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Submit</button>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
