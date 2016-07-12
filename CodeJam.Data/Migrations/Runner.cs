@@ -47,7 +47,7 @@ namespace CodeJam.Data.Migrations
         {
             public bool PreviewOnly { get; set; }
             public int Timeout { get; set; }
-            public string ProviderSwitches => string.Empty;
+            public string ProviderSwitches { get { return string.Empty; } }
         }
 
         private readonly MigrationRunner _runner;
