@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(CodeJam.Startup))]
+[assembly: OwinStartup(typeof(CodeJam.Startup))]
 namespace CodeJam
 {
     public partial class Startup
