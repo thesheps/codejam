@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma|Black+Ops+One|Allerta+Stencil|Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1 id="countdown"></h1>
+
+    <script type="text/javascript">
+        var endTime = new Date().getTime() + (1 * 60 * 60 * 1000);
+
+        $(function () {
+            $("#countdown").fitText(0.8);
+            tick();
+        });
+
+        function tick() {
+            var t = endTime - new Date();
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+
+            $("#countdown").html(('0' + hours).slice(-2) + ":" +
+                                 ('0' + minutes).slice(-2) + ":" +
+                                 ('0' + seconds).slice(-2));
+
+            setTimeout(function () {
+                tick();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

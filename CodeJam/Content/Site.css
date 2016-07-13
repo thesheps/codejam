@@ -21,3 +21,13 @@ h1 {
 .login-form {
     padding-top: 15px;
 }
+
+#countdown {
+  text-align: center;
+  color: #e60000;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-color: black;
+}
