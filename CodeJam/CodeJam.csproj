@@ -172,7 +172,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\Countdown\Index.cshtml" />
+    <Content Include="Views\Countdown\Index.cshtml" />
     <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
